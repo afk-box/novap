@@ -53,48 +53,14 @@ export default {
 					name: 'L4',
 				},
 			],
-			[
-				{
-					name: 'H4',
-				},
-				{
-					name: 'H3',
-				},
-				{
-					name: 'L4',
-				},
-				{
-					name: 'L5',
-				},
-				{
-					name: 'L1',
-				},
-			],
-			[
-				{
-					name: 'H3',
-				},
-				{
-					name: 'L3',
-				},
-				{
-					name: 'L3',
-				},
-				{
-					name: 'H1',
-				},
-				{
-					name: 'H1',
-				},
-			],
 		],
-		paddingPositions: [216, 205, 195, 16, 65],
+		paddingPositions: [216, 205, 195],
 		gameType: 'basegame',
-		anticipation: [0, 0, 0, 0, 0],
+		anticipation: [0, 0, 0],
 	},
 	setTotalWin: {
 		type: 'setTotalWin',
-		amount: 1000,
+		amount: 8.0,
 	},
 	finalWin: {
 		type: 'finalWin',
@@ -102,39 +68,22 @@ export default {
 	},
 	freeSpinTrigger: {
 		type: 'freeSpinTrigger',
-		totalFs: 12,
-		positions: [
-			{
-				reel: 0,
-				row: 3,
-			},
-			{
-				reel: 1,
-				row: 1,
-			},
-			{
-				reel: 2,
-				row: 3,
-			},
-			{
-				reel: 4,
-				row: 3,
-			},
-		],
+		totalFs: 10,
+		positions: [],
 	},
 	updateFreeSpin: {
 		type: 'updateFreeSpin',
 		amount: 1,
-		total: 12,
+		total: 10,
 	},
 	winInfo: {
 		type: 'winInfo',
-		totalWin: 400,
+		totalWin: 8.0,
 		wins: [
 			{
 				symbol: 'H3',
 				kind: 3,
-				win: 200,
+				win: 4.0,
 				positions: [
 					{
 						reel: 0,
@@ -142,17 +91,17 @@ export default {
 					},
 					{
 						reel: 1,
-						row: 2,
+						row: 1,
 					},
 					{
 						reel: 2,
-						row: 3,
+						row: 1,
 					},
 				],
 				meta: {
-					lineIndex: 4,
+					lineIndex: 1,
 					multiplier: 1,
-					winWithoutMult: 200,
+					winWithoutMult: 4.0,
 					globalMult: 1,
 					lineMultiplier: 1.0,
 				},
@@ -160,7 +109,7 @@ export default {
 			{
 				symbol: 'H3',
 				kind: 3,
-				win: 200,
+				win: 4.0,
 				positions: [
 					{
 						reel: 0,
@@ -168,7 +117,7 @@ export default {
 					},
 					{
 						reel: 1,
-						row: 2,
+						row: 3,
 					},
 					{
 						reel: 2,
@@ -176,9 +125,9 @@ export default {
 					},
 				],
 				meta: {
-					lineIndex: 13,
+					lineIndex: 3,
 					multiplier: 1,
-					winWithoutMult: 200,
+					winWithoutMult: 4.0,
 					globalMult: 1,
 					lineMultiplier: 1.0,
 				},
@@ -187,12 +136,12 @@ export default {
 	},
 	setWin: {
 		type: 'setWin',
-		amount: 400,
-		winLevel: 4,
+		amount: 8.0,
+		winLevel: 3,
 	},
 	freeSpinEnd: {
 		type: 'freeSpinEnd',
-		amount: 400,
-		winLevel: 2,
+		amount: 16.0,
+		winLevel: 4,
 	},
 };

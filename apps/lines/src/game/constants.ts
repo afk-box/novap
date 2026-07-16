@@ -59,40 +59,6 @@ export const INITIAL_BOARD: RawSymbol[][] = [
 			name: 'L4',
 		},
 	],
-	[
-		{
-			name: 'H4',
-		},
-		{
-			name: 'H3',
-		},
-		{
-			name: 'L4',
-		},
-		{
-			name: 'L5',
-		},
-		{
-			name: 'L1',
-		},
-	],
-	[
-		{
-			name: 'H3',
-		},
-		{
-			name: 'L3',
-		},
-		{
-			name: 'L3',
-		},
-		{
-			name: 'H1',
-		},
-		{
-			name: 'H1',
-		},
-	],
 ];
 
 export const BOARD_DIMENSIONS = { x: INITIAL_BOARD.length, y: INITIAL_BOARD[0].length - 2 };
@@ -168,81 +134,50 @@ const explosion = {
 	sizeRatios: { width: 1, height: 1 },
 };
 
-const h1Static = { type: 'sprite', assetKey: 'h1.webp', sizeRatios: { width: 1, height: 1 } };
-const h2Static = { type: 'sprite', assetKey: 'h2.webp', sizeRatios: { width: 1, height: 1 } };
-const h3Static = { type: 'sprite', assetKey: 'h3.webp', sizeRatios: { width: 1, height: 1 } };
-const h4Static = { type: 'sprite', assetKey: 'h4.webp', sizeRatios: { width: 1, height: 1 } };
 const h5Static = { type: 'sprite', assetKey: 'h5.webp', sizeRatios: { width: 1, height: 1 } };
 
-const l1Static = { type: 'sprite', assetKey: 'l1.webp', sizeRatios: { width: 1, height: 1 } };
-const l2Static = { type: 'sprite', assetKey: 'l2.webp', sizeRatios: { width: 1, height: 1 } };
-const l3Static = { type: 'sprite', assetKey: 'l3.webp', sizeRatios: { width: 1, height: 1 } };
-const l4Static = { type: 'sprite', assetKey: 'l4.webp', sizeRatios: { width: 1, height: 1 } };
-const l5Static = {
-	type: 'spine',
-	assetKey: 'M',
-	animationName: 'low_multiplier_static',
-	sizeRatios: { width: 0.3, height: 0.3 },
-};
-
-const sStatic = { type: 'sprite', assetKey: 's.png', sizeRatios: { width: 1.243, height: 1.243 } };
-const wStatic = { type: 'sprite', assetKey: 'w.png', sizeRatios: { width: 1.12, height: 1.12 } };
-
-const wSizeRatios = { width: 1.5 * 0.9, height: SPECIAL_SYMBOL_SIZE * 1.15 };
-const sSizeRatios = { width: 2.5, height: SPECIAL_SYMBOL_SIZE * 2.3 };
+const rusty1Static = { type: 'sprite', assetKey: 'carRusty1', sizeRatios: { width: 1, height: 1 } };
+const rusty2Static = { type: 'sprite', assetKey: 'carRusty2', sizeRatios: { width: 1, height: 1 } };
+const rusty3Static = { type: 'sprite', assetKey: 'carRusty3', sizeRatios: { width: 1, height: 1 } };
+const rusty4Static = { type: 'sprite', assetKey: 'carRusty4', sizeRatios: { width: 1, height: 1 } };
+const family1Static = { type: 'sprite', assetKey: 'carFamily1', sizeRatios: { width: 1, height: 1 } };
+const family2Static = { type: 'sprite', assetKey: 'carFamily2', sizeRatios: { width: 1, height: 1 } };
+const teenageStatic = { type: 'sprite', assetKey: 'carTeenage', sizeRatios: { width: 1, height: 1 } };
+const suvStatic = { type: 'sprite', assetKey: 'carSuv', sizeRatios: { width: 1, height: 1 } };
+const supremeStatic = { type: 'sprite', assetKey: 'carSupreme', sizeRatios: { width: 1, height: 1 } };
 
 export const SYMBOL_INFO_MAP = {
 	H1: {
 		explosion,
-		win: {
-			type: 'spine',
-			assetKey: 'H1',
-			animationName: 'h1',
-			sizeRatios: { width: 0.5 * 1.15, height: HIGH_SYMBOL_SIZE * 0.57 },
-		},
-		postWinStatic: h1Static,
-		static: h1Static,
-		spin: h1Static,
-		land: h1Static,
+		win: supremeStatic,
+		postWinStatic: supremeStatic,
+		static: supremeStatic,
+		spin: supremeStatic,
+		land: supremeStatic,
 	},
 	H2: {
 		explosion,
-		win: {
-			type: 'spine',
-			assetKey: 'H2',
-			animationName: 'h2',
-			sizeRatios: { width: 0.5, height: HIGH_SYMBOL_SIZE * 0.57 },
-		},
-		postWinStatic: h2Static,
-		static: h2Static,
-		spin: h2Static,
-		land: h2Static,
+		win: suvStatic,
+		postWinStatic: suvStatic,
+		static: suvStatic,
+		spin: suvStatic,
+		land: suvStatic,
 	},
 	H3: {
 		explosion,
-		win: {
-			type: 'spine',
-			assetKey: 'H3',
-			animationName: 'h3',
-			sizeRatios: { width: 0.5 * 0.9, height: HIGH_SYMBOL_SIZE * 0.53 },
-		},
-		postWinStatic: h3Static,
-		static: h3Static,
-		spin: h3Static,
-		land: h3Static,
+		win: teenageStatic,
+		postWinStatic: teenageStatic,
+		static: teenageStatic,
+		spin: teenageStatic,
+		land: teenageStatic,
 	},
 	H4: {
 		explosion,
-		win: {
-			type: 'spine',
-			assetKey: 'H4',
-			animationName: 'h4',
-			sizeRatios: { width: 0.5 * 0.9, height: HIGH_SYMBOL_SIZE * 0.53 },
-		},
-		postWinStatic: h4Static,
-		static: h4Static,
-		spin: h4Static,
-		land: h4Static,
+		win: family2Static,
+		postWinStatic: family2Static,
+		static: family2Static,
+		spin: family2Static,
+		land: family2Static,
 	},
 	H5: {
 		explosion,
@@ -259,103 +194,43 @@ export const SYMBOL_INFO_MAP = {
 	},
 	L1: {
 		explosion,
-		win: {
-			type: 'spine',
-			assetKey: 'L1',
-			animationName: 'l1',
-			sizeRatios: { width: 0.5 * 0.75, height: LOW_SYMBOL_SIZE * 0.65 },
-		},
-		postWinStatic: l1Static,
-		static: l1Static,
-		spin: l1Static,
-		land: l1Static,
+		win: rusty1Static,
+		postWinStatic: rusty1Static,
+		static: rusty1Static,
+		spin: rusty1Static,
+		land: rusty1Static,
 	},
 	L2: {
 		explosion,
-		win: {
-			type: 'spine',
-			assetKey: 'L2',
-			animationName: 'l2',
-			sizeRatios: { width: 0.5 * 0.75, height: LOW_SYMBOL_SIZE * 0.65 },
-		},
-		postWinStatic: l2Static,
-		static: l2Static,
-		spin: l2Static,
-		land: l2Static,
+		win: rusty2Static,
+		postWinStatic: rusty2Static,
+		static: rusty2Static,
+		spin: rusty2Static,
+		land: rusty2Static,
 	},
 	L3: {
 		explosion,
-		win: {
-			type: 'spine',
-			assetKey: 'L3',
-			animationName: 'l3',
-			sizeRatios: { width: 0.5 * 0.75, height: LOW_SYMBOL_SIZE * 0.63 },
-		},
-		postWinStatic: l3Static,
-		static: l3Static,
-		spin: l3Static,
-		land: l3Static,
+		win: rusty3Static,
+		postWinStatic: rusty3Static,
+		static: rusty3Static,
+		spin: rusty3Static,
+		land: rusty3Static,
 	},
 	L4: {
 		explosion,
-		win: {
-			type: 'spine',
-			assetKey: 'L4',
-			animationName: 'l4',
-			sizeRatios: { width: 0.5 * 0.75, height: LOW_SYMBOL_SIZE * 0.63 },
-		},
-		postWinStatic: l4Static,
-		static: l4Static,
-		spin: l4Static,
-		land: l4Static,
+		win: rusty4Static,
+		postWinStatic: rusty4Static,
+		static: rusty4Static,
+		spin: rusty4Static,
+		land: rusty4Static,
 	},
 	L5: {
 		explosion,
-		win: {
-			type: 'spine',
-			assetKey: 'M',
-			animationName: 'low_multiplier_pay',
-			sizeRatios: { width: 0.3, height: 0.3 },
-		},
-		postWinStatic: l5Static,
-		static: l5Static,
-		spin: l5Static,
-		land: l5Static,
-	},
-	W: {
-		explosion,
-		postWinStatic: {
-			type: 'sprite',
-			assetKey: 'explodedW.png',
-			sizeRatios: { width: 0.85, height: 0.85 },
-		},
-		static: wStatic,
-		spin: wStatic,
-		win: { type: 'spine', assetKey: 'W', animationName: 'wild_dynamite', sizeRatios: wSizeRatios },
-		land: {
-			type: 'spine',
-			assetKey: 'W',
-			animationName: 'wild_dynamite_land',
-			sizeRatios: wSizeRatios,
-		},
-	},
-	S: {
-		explosion,
-		postWinStatic: sStatic,
-		static: sStatic,
-		spin: {
-			type: 'spine',
-			assetKey: 'S',
-			animationName: 'scatter_spin',
-			sizeRatios: sSizeRatios,
-		},
-		win: { type: 'spine', assetKey: 'S', animationName: 'scatter_win', sizeRatios: sSizeRatios },
-		land: {
-			type: 'spine',
-			assetKey: 'S',
-			animationName: 'scatter_land',
-			sizeRatios: sSizeRatios,
-		},
+		win: family1Static,
+		postWinStatic: family1Static,
+		static: family1Static,
+		spin: family1Static,
+		land: family1Static,
 	},
 } as const;
 
